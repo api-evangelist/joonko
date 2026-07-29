@@ -1,7 +1,24 @@
 aid: joonko
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/joonko.png
 name: joonko
-description: joonko is a company surfaced as a portfolio company of insight-partners and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: 'joonko is a company surfaced as a portfolio company of insight-partners and added to the
+  API Evangelist network as a stub for enrichment. As of the 2026-07-20 enrichment pass its public web
+  presence is offline: the joonko.co apex resolves no A record (AWS nameservers, domain registered through
+  2027) and the app.joonko.co CloudFront distribution is dead, while joonko.com is parked and listed
+  for sale on Afternic. Email infrastructure (Google Workspace MX, SPF, DMARC p=none) remains active,
+  but there is no reachable website, developer portal, documentation, or API surface to enroll. No API,
+  OpenAPI, SDK, or developer artifacts could be discovered. The profile remains a dormant lead.'
 url: https://raw.githubusercontent.com/api-evangelist/joonko/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,7 +28,15 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+x-status: offline
+x-status-note: 'joonko.co apex has no A record; joonko.com parked/for-sale on Afternic; app.joonko.co
+  CloudFront dead. No live web/API surface at enrichment time.'
+x-enrichment:
+  date: '2026-07-20'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
 tags:
 - Company
 apis: []
@@ -21,5 +46,7 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/joonko-domain-security.yml
 - type: Website
   url: https://joonko.co/
